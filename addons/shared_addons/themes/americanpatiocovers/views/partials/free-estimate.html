@@ -1,0 +1,123 @@
+<section class="three-fourth">
+
+
+ {{ if { session:messages success="success_estimate" } != NULL }}
+<div class="alert alert-success">
+	You have successfully filled out the form correctly and we will be in touch with you in the next 24 business hours.
+</div>
+{{ endif }} {{ if { session:messages success="success_estimate" } == NULL }}
+
+
+{{ contact:form name="text|required" email="text|required|valid_email" phone="text|required" city="text|required" hear="text"  message="textarea|required" reply-to = "web@loudclear.ca" button = "Send Message" template = "estimate" lang = "en" to = "web@loudclear.ca" from = "American Patio Covers" sent = "Your message has been sent. Thank you for contacting us" error = "Sorry. Your message could not be sent. Try again" }}
+        
+        <div class="simple-form">
+        
+        
+          <div class="row">
+            <div class="col-lg-6">
+	      
+          <label for="name"><i class="icon-user"></i> <small>Name</small> <span class="error">*</span></label>
+            <fieldset>
+				<i class="tooltip left" title="Your Name">{{ name }}</i>
+		        
+			</fieldset>
+            </div>
+            
+            <br />
+            
+              <div class="col-lg-6">
+	      
+          <label for="name"><i class="icon-envelope"></i> <small>Email</small> <span class="error">*</span></label>
+            <fieldset>
+				<i class="tooltip left" title="Your Email">{{ email }}</i>
+		        
+			</fieldset>
+            </div>
+            
+            <br />
+            
+             <div class="col-lg-6">
+	      
+          <label for="name"><i class="icon-phone"></i> <small>Phone Number</small> <span class="error">*</span></label>
+            <fieldset>
+				<i class="tooltip left" title="Phone Number">{{ phone }}</i>
+		        
+			</fieldset>
+            </div>
+            <br />
+            
+             <div class="col-lg-6">
+	      
+          <label for="name"><i class="icon-home"></i> <small>City</small> <span class="error">*</span></label>
+            <fieldset>
+				<i class="tooltip left" title="City">{{ city }}</i>
+		        
+			</fieldset>
+            </div>
+            <br />
+                <div class="col-lg-6">
+	      
+          <label for="name"><i class="icon-question-sign"></i> <small>How did you hear about this?</small></label>
+            <fieldset>
+				<i class="tooltip left" title="Hear about this?">{{ hear }}</i>
+		        
+			</fieldset>
+            </div>
+            <br />
+            
+              <div class="col-lg-6">
+	      
+          <label for="name"><i class="icon-edit"></i> <small>Message</small> <span class="error">*</span></label>
+            <fieldset>
+				<i class="tooltip left" title="Your Message">{{ message }}</i>
+		        
+			</fieldset>
+            </div>
+            
+ </div>
+
+<p></p><br />
+{{ /contact:form }}
+{{ endif }}             
+
+
+<!--
+	<form action="#" id="free-estimate" class="simple-form " method="post" style="margin-top:30px;">
+		<div id="error-field">
+		</div>
+		<fieldset>
+			<i class="icon-user tooltip left" title="Your Name"></i>
+	        <input value="Your Name" title="Your Name" onblur="if(this.value=='')this.value='Your Name';" onfocus="if(this.value=='Your Name')this.value='';" type="text" class="text requiredField" name="name"/>
+		</fieldset>
+        
+        
+		<fieldset>
+			<i class="icon-envelope tooltip left" title="Your Email"></i>
+	        <input type="text" title="Your Email" value="Your Email" onblur="if(this.value=='')this.value='Your Email';" onfocus="if(this.value=='Your Email')this.value='';" class="email requiredField" name="email"/>
+		</fieldset>
+		<fieldset>
+			<i class=" icon-phone tooltip left" title="Phone Number"></i>
+	        <input type="text" title="Phone Number" value="Phone Number" onblur="if(this.value=='')this.value='Phone Number';" onfocus="if(this.value=='Phone Number')this.value='';" class="text" name="url"/>
+		</fieldset>
+        <fieldset>
+			<i class=" icon-home tooltip left" title="Phone Number"></i>
+	        <input type="text" title="City" value="City" onblur="if(this.value=='')this.value='City';" onfocus="if(this.value=='City')this.value='';" class="text" name="url"/>
+		</fieldset>
+         <fieldset>
+			<i class="icon-question-sign tooltip left" title="Phone Number"></i>
+	        <input type="text" title="How Did You Hear About This?" value="How Did You Hear About This?" style="width:250px;" onblur="if(this.value=='')this.value='How Did You Hear About This?';" onfocus="if(this.value=='How Did You Hear About This?')this.value='';" class="text" name="url"/>
+		</fieldset>
+        <fieldset>
+            <textarea cols="30" rows="12"  class="text requiredField" name="message"></textarea>
+        </fieldset>
+        
+		<div class="three-fourth">
+			<input type="submit" value="Send message" class="button big grey round"/>
+		</div>
+	</form>-->
+</section>
+<section class="one-fourth sidebar right">
+	<div class="widget">
+	
+	</div>
+</section>

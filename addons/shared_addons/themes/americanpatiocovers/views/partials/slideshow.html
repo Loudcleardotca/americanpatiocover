@@ -1,0 +1,51 @@
+	<section class="flex-container">
+		<div class="flexslider single-portfolio-item-slider">
+			<ul class="slides">
+			
+            
+            
+            
+              {{ streams:cycle stream="slideshow" where="`status`='live'" no_results="" sort="random" order_by="ordering_count" }}         
+            
+            
+             
+            
+            	<li style="background:transparent url(/files/large/{{slideshow_image:id}}); height:450px; background-size: cover;">
+				<div class="container">
+					<div class="one-half">
+						<div class="flex-slider-text">
+							
+                            <div class="text-box-slider">
+	                            <h1 style="color:#000000; text-transform:uppercase; margin-bottom:10px;">{{ title }}</h1>
+								<p class="text" style="opacity:1;">
+									{{ description }} 
+								</p>
+	                    	</div>
+								<p style="margin-top:50px;">
+									<a href="{{link.uri}}" class="button huge round color">Read More</a>
+									<!--<a href="#" class="button huge round color">Portfolio</a>-->
+								</p>
+                            
+						</div>
+					</div>
+					<div class="one-half">
+					
+					</div>
+				</div>
+				</li>
+				
+           {{ /streams:cycle }}         
+                
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            </ul>
+		</div>
+		</section>
+		<!--layer slider ends-->

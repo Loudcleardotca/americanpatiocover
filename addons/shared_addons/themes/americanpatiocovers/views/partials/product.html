@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="one">
+        <div class="three-fourth">
+   			{{ streams:cycle stream="products" where="`status`='live'" no_results="" sort="asc" order_by="ordering_count" }}      
+   				{{ if {url:segments segment="2"} == slug }}
+		            <div class="blog-post">
+		                <div class="media-holder">
+		                    <div class="flexslider portfolio-items-slider slide">
+		                        <ul class="slides">
+		                            <li><img src="/files/large/{{large_image:id}}/700/253/fit" alt="{{ title }}" title="{{ title }}" class="img3"></li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <div class="permalink">
+		                    <h4>{{ subtitle }}</h4>
+		                </div>
+		                <br />
+		                <!-- End post-meta -->
+		                <div class="post-intro">
+		                    <p>{{ body }}</p>
+		                </div>
+		            </div>
+            	{{ endif }}
+             {{ /streams:cycle }}   
+        </div>
+        
+        <!-- SIDEBAR-->
+        {{ theme:partial name="sidebar" }}
+        <!-- END SIDEBAR-->
+        
+    </div>
+</div>
+

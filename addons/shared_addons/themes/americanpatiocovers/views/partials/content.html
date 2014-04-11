@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="one">   
+	    <div class="blog-post">           
+	        {{ pages:display slug="{{ page:slug }}" }}
+	            {{ custom_fields }} 
+	            
+                	{{ if {url:segments segment="1"} != 'free-estimate' }}
+		                <div class="media-holder">
+		                    <div class="flexslider portfolio-items-slider slide">
+		                        <ul class="slides">
+		                            <li><img src="{{ banner_image:image }}" alt="{{ title }}" class="img3"></li>
+		                        </ul>
+		                    </div>
+		                </div>
+                    {{ endif }}	
+                    
+                    
+	                <div class="permalink">
+	                    <h4>{{ default_title }}</h4>
+	                </div>
+	                <br />
+	                <!-- End post-meta -->
+	                <div class="post-intro">
+	                    <p>{{ body }}</p>
+	                </div>
+	            
+	            {{ /custom_fields }}
+	        {{ /pages:display }}
+	        
+	        <!-- FREE ESTIMATE PAGE -->
+		    {{ if {url:segments segment="1"} == 'free-estimate' }}
+		    	{{ theme:partial name="free-estimate" }}
+				
+			{{ endif }}					
+	    </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,55 @@
+<style type="text/css">
+.portfolio-item{ width:216; height:144px; overflow:hidden;}
+</style>
+
+<div class="container">
+    
+     <div class="one" style="margin-bottom:30px;">                
+        {{ pages:display slug="{{ page:slug }}" }}
+            {{ custom_fields }}             
+                <p>{{ body }}</p>           
+            {{ /custom_fields }}
+        {{ /pages:display }}					
+    </div>
+    
+    <ul id="filterable">
+        <li><a data-categories="*">All</a></li>
+        <li><a data-categories="patio">Patio Covers</a></li>
+        <li><a data-categories="sunrooms">Sunrooms</a></li>
+        <li><a data-categories="ready">Ready Rail</a></li>
+        <li><a data-categories="pergolas">Wood Pergolas</a></li>      
+    </ul>
+     
+    <ul id="portfolio-container" class="four-columns">       
+		{{ streams:cycle stream="gallery" where="`status`='live'" no_results="" sort="asc" order_by="ordering_count" }} 
+	        <li class="isotope-item" data-categories="{{ gallery_categories }}{{ key }} {{ /gallery_categories }}">
+	            <div class="item-wrapp">
+	                <div class="portfolio-item">	              
+	                    <a href="{{ url:site }}uploads/default/files/{{ gallery_image:filename }}" class="{{ gallery_categories }}{{ key }}ciao {{ /gallery_categories }} item-preview" title="{{ title }}"><i class="icon-zoom-in"></i></a>
+	                    <img src="/files/large/{{gallery_image:id}}/216/144/fit" alt="{{ title }}" />
+	                </div>
+	                <!-- <div class="portfolio-item-title">
+	                   {{ title }}
+	                    <p>{{ caption }}</p>
+	                </div> -->
+	            </div>
+	        </li>
+	   {{ /streams:cycle }}    
+    </ul>
+     
+
+        <!-- Pagination -->
+          <!--  <nav class="pagination">
+            <ul>
+                <li><a href="#">Previous</a></li>
+                <li><a href="#" class="current">1</a></li>
+                <li><a href="#" >2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+             
+            </nav>-->
+        <!-- End pagination -->
+</div>
+
+

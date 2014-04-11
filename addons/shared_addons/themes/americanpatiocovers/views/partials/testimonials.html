@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="one">
+        <div class="three-fourth">                    	
+            {{ streams:cycle stream="testimonials" where="`status`='live'" no_results="" sort="asc" order_by="ordering_count" }}                  
+                <div class="blog-post layout-2">
+                    <div class="media-holder"><!-- --></div>
+                    <div class="permalink">
+                        <h4>{{ title }}</h4>
+                    </div>
+                    <ul class="post-meta">
+                        <!-- Date -->
+                        <li><i class="icon-user"></i>{{ name }}</li>
+                        <!-- Author -->
+                        <li><i class="icon-tags"></i>{{ location }}</li>
+                        <!-- Comments -->
+                    </ul>
+                    <div  style="clear:both;"><!-- --></div>
+                    <!-- End post-meta -->
+                    <div class="post-intro">
+                        <p>{{ testimonial }}</p>							
+                    </div>
+                </div>			
+            {{ /streams:cycle }}   
+        </div> 
+             
+        <!-- SIDEBAR-->
+        {{ theme:partial name="sidebar" }}
+        <!-- END SIDEBAR-->
+        
+    </div>
+</div>

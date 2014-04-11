@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+	{{ theme:partial name="metadata" }}
+</head>
+<body>
+<div id="container">
+	<!-- main container starts-->
+	<div id="wrapp">
+		<!-- headers-->
+		{{ theme:partial name="header" }}
+		<!-- header ends-->
+		<div id="content">
+        	<!-- breadcrumb starts-->
+			{{ if {url:segments segment="1"} != 'contact' }}
+	
+	            <div id="breadcrumb">				
+					<div class="container">
+						<div class="one-half">
+							<h4>{{ template:title }}</h4>
+						</div>
+						<div class="one-half">
+						<!--	<nav id="breadcrumbs">
+							 <ul>
+							{{ if template:has_breadcrumbs }}
+	    						{{ if theme:options:show_breadcrumbs == 'yes' }} 									
+								        {{ template:breadcrumbs }}
+											{{ if uri }}
+												<li>{{ url:anchor segments=uri title=name }}</li>
+											{{ else }}
+												<li>{{ name }}</li>
+											{{ endif }}
+										{{ /template:breadcrumbs }}
+										
+									{{ endif }}
+								{{ endif }}</ul>
+							</nav>-->
+							<!--breadcrumb nav ends -->
+						</div>
+					</div>
+				</div>
+            {{ endif }}
+			<!--breadcrumbs ends -->
+            
+            <!-- content -->
+			{{ theme:partial name="partial" }}
+            <!-- End content -->
+            
+		</div>
+		<!-- footer -->
+		{{ theme:partial name="footer" }}
+        <!-- End footer -->
+	</div>
+	<!-- main wrapp starts-->
+</div>
+<!-- main container ends-->
+
+{{ theme:partial name="scripts" }}
+</body>
+</html>

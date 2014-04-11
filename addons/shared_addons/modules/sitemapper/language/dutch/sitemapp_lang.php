@@ -1,0 +1,26 @@
+<?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+$lang['title']                          = 'Sitemap';
+$lang['none_pages_found']               = 'Geen pagina\'s werden gevonden op deze site.';
+$lang['sitemap_list_excluded']          = 'Toon alle uitzonderingen';
+$lang['sitemap_exclude_create_title']   = 'Voeg uitzondering toe';
+$lang['sitemap_link_type']              = 'Link type';
+$lang['sitemap_module_name']            = 'Module naam';
+$lang['out_of_modules']                 = 'Er zijn geen modules (meer) om uit te zonderen.';
+$lang['out_of_pages']                   = 'Er zijn geen pagina\'s (meer) om uit te zonderen.';
+$lang['sitemap_type_label']             = 'Link type';
+$lang['sitemap_module_label']           = 'Module';
+$lang['sitemap_page_label']             = 'Pagina';
+$lang['sitemap_actions_label']          = 'Acties';
+$lang['sitemap.sitemap_label']          = 'Sitemap uitzonderingen';
+$lang['sitemap_module_add_success']     = 'De module uitzondering <strong>%s</strong> is toegevoegd.';
+$lang['sitemap_page_add_success']       = 'De pagina uitzondering <strong>%s</strong> is toegevoegd.';
+$lang['sitemap_link_add_error']         = 'Er is een onverwachte fout opgetreden.';
+$lang['sitemap_link_delete_success']    = 'Met succes de uitzondering(en)/pagina\'s verwijderd.';
+$lang['sitemap_link_delete_error']      = 'Een fout is opgetreden bij het verwijderen van (de) uitzondering(en)/pagina\'s.';
+$lang['sitemap_link_delete_no_success'] = 'Selecteer één of meerdere items om te verwijderen';
+$lang['sitemap_link_type_desc']         = '<u>Selecteer eerst een linktype voor meer opties</u>';
+$lang['sitemapp.no_excludes']           = 'Er zijn momenteel geen uitgesloten pagina\'s/modules';
+$lang['sitemapp.usage_info']            = 'Plaats "<u>{{ sitemapper:show }}</u>" in een pagina om de sitemap te laten zien.';
+$lang['sitemapp.created_on_label']      = 'Gemaakt op';
+$lang['sitemapp.out_of_excludes']       = 'U heeft geen uitzonderingen meer beschikbaar!';

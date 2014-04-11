@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+	{{ theme:partial name="metadata" }}
+    
+</head>
+<body>
+<div id="container">
+	<!-- main container starts-->
+	<div id="wrapp">
+   
+		<!-- headers-->
+		{{ theme:partial name="header" }}
+		<!-- header ends-->
+        
+		{{ theme:partial name="slideshow" }}
+        
+        <!-- home intro starts -->
+        <div id="content">
+        	<div class="home-intro">
+				<div class="container">
+					<div class="three-fourth">
+						<h4>Get a Free In-home Estimate from the Pros!</h4>
+						<p>We come to your home and give you a no-obligation quote.<br />Complete Installed Covers from $25.00 per square foot!</p>
+					</div>
+					<div class="one-fourth">
+						<a href="/free-estimate" class="button color big round">Learn More</a>
+					</div>
+				</div>
+			</div>
+        </div>
+        <!--home intro ends-->
+		<div id="content">
+                    
+           	{{ theme:partial name="featured" }}
+			<!--features block ends-->
+			
+			<div class="intro-features"><!-- intro features panel starts -->
+				<div class="container">
+	                <div class="one">
+						<div class="feature-block"><!-- features blocks starts -->
+							{{ pages:display slug="{{ page:slug }}" }}
+					            {{ custom_fields }} 
+				                	<div class="feature-block-title">
+										<h4>{{ home_page_title }}</h4>
+									</div>
+									<p>{{ home_page_body }}</p>
+			                        <br>
+			                        <a href="{{ link:uri }}" class="button color big round">Learn More</a><br><br>
+					            {{ /custom_fields }}
+					        {{ /pages:display }}
+						</div>
+					</div>
+                </div>
+			</div><!-- intro features panel ends -->
+			<div class=" clients-wrapp">
+				<div class="container">
+					<br><br><!-- flex slider ends -->
+				</div>
+			</div>
+		</div>
+        
+		<!-- footer -->
+		{{ theme:partial name="footer" }}
+        <!-- End footer -->
+		
+	</div>
+	<!-- main wrapp starts-->
+</div>
+<!-- main container ends-->
+
+{{ theme:partial name="scripts" }}
+
+</body>
+</html>

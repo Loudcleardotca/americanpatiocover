@@ -1,0 +1,26 @@
+<?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+$lang['title']                          = 'Sitemap';
+$lang['none_pages_found']               = 'No pages were found on this site';
+$lang['sitemap_list_excluded']          = 'Show all excludes';
+$lang['sitemap_exclude_create_title']   = 'Add exclude';
+$lang['sitemap_link_type']              = 'Link type';
+$lang['sitemap_module_name']            = 'Module name';
+$lang['out_of_modules']                 = 'There are no (more) modules to exclude';
+$lang['out_of_pages']                   = 'There are no (more) pages to exclude';
+$lang['sitemap_type_label']             = 'Link type';
+$lang['sitemap_module_label']           = 'Module';
+$lang['sitemap_page_label']             = 'Page';
+$lang['sitemap_actions_label']          = 'Actions';
+$lang['sitemap.sitemap_label']          = 'Sitemap excludes';
+$lang['sitemap_module_add_success']     = 'The exclude module <strong>%s</strong> was added.';
+$lang['sitemap_page_add_success']       = 'The exclude page <strong>%s</strong> was added.';
+$lang['sitemap_link_add_error']         = 'An unexpected error occurred.';
+$lang['sitemap_link_delete_success']    = 'Deleted the page(s)/module(s) with success.';
+$lang['sitemap_link_delete_error']      = 'An error occured while deleting (the) page(s)/module(s).';
+$lang['sitemap_link_delete_no_success'] = 'Select on or more items to delete';
+$lang['sitemap_link_type_desc']         = 'Please select a link type to be given more options to create your exclude.';
+$lang['sitemapp.no_excludes']           = 'There are currently no excluded pages/modules';
+$lang['sitemapp.usage_info']            = 'Place "<u>{{ sitemapper:show }}</u>" in a page to show the complete sitemap.';
+$lang['sitemapp.created_on_label']      = 'Created on';
+$lang['sitemapp.out_of_excludes']       = 'You have no more excludes available!';

@@ -1,0 +1,50 @@
+<div class="container">
+					<h4>OUR PRODUCTS</h4>
+					
+                    
+                    <div class="slidewrap">
+						<!--project carousel starts-->
+						<ul class="slider" id="sliderName">
+							
+                            
+                            
+                            
+                            <li class="slide"><!-- carousel item starts -->
+                            
+     
+      {{ streams:cycle stream="products" where="`status`='live' AND `featured`='yes'" no_results="" sort="asc" order_by="ordering_count" limit="4" }}                          
+                   
+                
+                            
+                            
+							<div class="one-fourth">
+							<div class="item-wrapp">
+								<div class="portfolio-item">
+									<!--<a href="/products/{{ slug }}" class="item-permalink"><i class="icon-link"></i></a>
+									<a href="/products/{{ slug }}" data-rel="prettyPhoto" class="item-preview"><i class="icon-zoom-in"></i></a>-->
+									<a href="/products/{{ slug }}"><img src="/files/large/{{square_image:id}}/540/372/fit" alt="{{ title }}" title="{{ title }}"/></a>
+								</div>
+								<div class="portfolio-item-title">
+									<a href="/products/{{ slug }}" style="font-weight:bold; text-transform:uppercase;">{{ title }}</a>
+								
+								</div>
+							</div>
+							</div>
+
+							
+        {{ /streams:cycle }}                       
+                            
+                            
+     
+                            
+							</li>
+							
+						</ul><!-- carousel items UL ends -->
+						<!-- 
+                        <ul class="slidecontrols">
+							<li><a href="#sliderName" class="prev">Prev</a></li>
+							<li><a href="#sliderName" class="next">Next</a></li>
+							
+						</ul> -->
+					</div>
+				</div>

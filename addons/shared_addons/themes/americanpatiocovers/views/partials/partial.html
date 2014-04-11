@@ -1,0 +1,13 @@
+<!-- Custom Views -->						
+{{ if {url:segments segment="1"} == 'gallery' }}
+	{{ theme:partial name="/modules/gallery" }}
+{{ elseif {url:segments segment="1"} == 'products' }}
+	{{ theme:partial name="product" }} 
+{{ elseif {url:segments segment="1"} == 'contact' }}
+	{{ theme:partial name="contact" }}
+{{ elseif {url:segments segment="1"} == 'testimonials' }}
+	{{ theme:partial name="testimonials" }}    
+{{ else }}
+  	{{ theme:partial name="content" }} 
+{{ endif }}
+

@@ -1,0 +1,111 @@
+<div id="google-map"></div>
+<div class="container">
+    <section class="three-fourth">
+    	
+     <div style="padding-right:100px;">   
+        <p>Contact us to get started on your dream outdoor living space! <br /><br /></p>    
+	
+  {{ if { session:messages success="success_contact" } != NULL }}
+<div class="alert alert-success">
+	You have successfully filled out the form correctly and we will be in touch with you in the next 24 business hours.
+</div>
+{{ endif }} {{ if { session:messages success="success_contact" } == NULL }}
+
+
+{{ contact:form name="text|required" email="text|required|valid_email" subject="text|required"  message="textarea|required" reply-to = "info@acrylicpatiocovers.com" button = "Send Message" template = "contact" lang = "en" to = "web@loudclear.ca,  info@acrylicpatiocovers.com " from = "American Patio Covers" sent = "Your message has been sent. Thank you for contacting us" error = "Sorry. Your message could not be sent. Try again" }}
+        
+       
+        
+        
+
+	      
+          <label for="name"><i class="icon-user"></i> <small>Name</small> <span class="error">*</span></label>
+            <fieldset>
+				<i class="tooltip left" title="Your Name">{{ name }}</i>
+		        
+			</fieldset>
+         
+            
+            <br />
+            
+  
+	      
+          <label for="name"><i class="icon-envelope"></i> <small>Email</small> <span class="error">*</span></label>
+            <fieldset>
+				<i class="tooltip left" title="Your Email">{{ email }}</i>
+		        
+			</fieldset>
+          
+            
+            <br />
+          
+	      
+          <label for="name"><i class="icon-pencil"></i> <small>Subject</small> <span class="error">*</span></label>
+            <fieldset>
+				<i class="tooltip left" title="Subject">{{ subject }}</i>
+		        
+			</fieldset>
+         
+            <br  />
+            
+
+	      
+          <label for="name"><i class="icon-edit"></i> <small>Message</small> <span class="error">*</span></label>
+            <fieldset>
+				<i class="tooltip left" title="Your Message">{{ message }}</i>
+		        
+			</fieldset>
+         
+            
+   <br  /> <br  />
+
+
+{{ /contact:form }}
+{{ endif }}    
+    
+     <br  /> <br  />
+    
+    	<!--<form action="#" id="contact-form" class="simple-form " method="post">
+			<div id="error-field"></div>
+			<fieldset>
+				<i class="icon-user tooltip left" title="Your Name"></i>
+		        <input value="Your Name" title="Your Name" onblur="if(this.value=='')this.value='Your Name';" onfocus="if(this.value=='Your Name')this.value='';" type="text" class="text requiredField" name="name"/>
+			</fieldset>
+		
+        
+        
+        
+        	<fieldset>
+				<i class="icon-envelope tooltip left" title="Your Email"></i>
+		        <input type="text" title="Your Email" value="Your Email" onblur="if(this.value=='')this.value='Your Email';" onfocus="if(this.value=='Your Email')this.value='';" class="email requiredField" name="email"/>
+			</fieldset>
+			<fieldset>
+				<i class="icon-pencil tooltip left" title="Subject"></i>
+		        <input type="text" title="Subject" value="Subject" onblur="if(this.value=='')this.value='Subject';" onfocus="if(this.value=='Subject')this.value='';" class="text" name="url"/>
+			</fieldset>
+			<fieldset>
+				<textarea cols="30" rows="12"  class="text requiredField" name="message"></textarea>
+			</fieldset>
+			<div class="three-fourth">
+				<input type="submit" value="Send message" class="button big grey round"/>
+			</div>
+		</form>-->
+        
+   </div>
+        
+	</section>
+	<section class="one-fourth sidebar right">
+	    <div class="widget">
+	        {{ pages:display slug="{{ page:slug }}" }}
+	            {{ custom_fields }} 
+	            	<h4 class="widget-title">{{ default_title }}</h4>
+	               	<p>{{ body }}</p>
+	            {{ /custom_fields }}
+	        {{ /pages:display }}
+	    </div>
+	</section>
+</div>
+
+
+
+

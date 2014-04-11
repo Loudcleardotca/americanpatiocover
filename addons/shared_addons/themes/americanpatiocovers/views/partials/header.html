@@ -1,0 +1,63 @@
+<header id="header">
+    <!--header starts -->
+    <!--<div id="header-links">
+        <div class="container">
+            <div class="one-half">
+                <ul class="contact-links">
+                    
+                    <li>Telephone: 360-658-7281 or 1-800-556-0079</li>
+                </ul>
+            </div>
+            <div class="one-half">
+                <ul class="social-links">
+                   
+                    {{ navigation:links group="social"}} 
+                      	{{ if title == "Houzz" }}
+                    		<li><a href="{{ url }}" title="{{ title }}" target="_blank">{{ theme:image file="huzz.png" alt="huzz" }}</a></li>  
+                        {{ else }}
+                        <li><a href="{{ url }}" title="{{ title }}" target="_blank"><i class="icon-{{class}}"></i></a></li>
+                        {{ endif }}
+            		{{ /navigation:links }} 
+                    
+                </ul>
+                header social links ends
+            </div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="head-wrapp">
+            <a href="/" id="logo" title="American Patio Covers Plus"><img src="{{ settings:site_logo }}" alt="{{ settings:site_name }}" title="{{ settings:site_name }}" /></a>
+            <nav class="top-search">
+            {{ theme:image file="APC_banner.jpg" alt="American Patio Covers Plus!" width="100%" }}
+            </nav>
+        </div>
+    </div>
+    <div id="main-navigation">
+        <!--main navigation wrapper starts -->
+        <div class="container">
+            <ul class="main-menu">
+                <!-- <li><a href="index.html" id="current">Home</a></li> -->
+                {{ navigation:links group="header" indent="tab"  class="active"}}             
+                    {{ if children }}
+                      <li class="{{ class }}"><a href="javascript:void(0);" style="cursor:default;">{{ title }}<strong></strong></a>
+                        <ul>
+                        {{ children }}
+                              <li class="{{ class }}"><a href="{{ url }}">{{ title }}</a></li>
+                          {{ /children }}
+                        </ul>
+                      </li> 
+                  {{ else }}
+                    <li class="{{ class }}"><a href="{{ url }}">{{ title }}<strong></strong></a></li>
+                  {{ endif }}
+                {{ /navigation:links }} 
+            </ul>
+            
+            
+            <!-- main navigation ends
+            <div class="after-nav-info">
+                <h4><b>CALL TODAY: 1-800-556-0079 <br />Local: 360-658-7281</b></h4>
+            </div>-->
+        </div>
+    </div>
+    <!--main navigation wrapper ends -->
+</header>

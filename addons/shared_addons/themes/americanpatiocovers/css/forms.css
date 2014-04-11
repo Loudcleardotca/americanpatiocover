@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* CSS Document */
+ /*--------------------------------------------------------------------------------------*/
+ /* FORMS             */
+ /*-------------------------------------------------------------------------------------*/
+.error{ color:#C00; }
+.contact-button {
+    border-radius: 4px;
+	color: #FFFFFF !important;
+}
+.contact-button {
+    padding: 11px 17px;
+	color: #FFFFFF !important;
+}
+.contact-button {
+    background: none repeat scroll 0 0 #89929D;
+    border-bottom: 1px solid #656D78;
+    text-decoration: none;
+	color: #FFFFFF !important;
+}
+.contact-button {
+    cursor: pointer;
+    font-family: "Roboto",Arial,Verdana;
+    font-size: 12px;
+    outline: medium none;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize !important;
+    transition: all 0.24s ease 0s;
+	color: #FFFFFF !important;
+}
+.contact-button {
+    background: none repeat scroll 0 0 #89929D;
+    border-bottom: 1px solid #656D78;
+    text-decoration: none;
+	color: #FFFFFF !important;
+}
+
+.contact-button:hover {
+    background: none repeat scroll 0 0 #72AC34;
+    border-bottom: 1px solid #5E9424;
+}
+
+.contact-form input[type="submit"] {
+	color: #FFFFFF !important;
+}
+
+#contact_name, #contact_email, #contact_subject, #contact_message, #contact_phone, #contact_city, #contact_hear {
+	width:96%;
+	background-color:transparent;
+	
+} 
+
+.alert-success{
+	font-weight:bold;
+	color:#090;
+}
+
+form.simple-form input {background: transparent;}

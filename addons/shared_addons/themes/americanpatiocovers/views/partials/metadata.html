@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+
+<title>
+{{ if page:meta_title != NULL }}
+      {{ page:meta_title}} » {{ settings:site_name }} 
+{{ else }}
+         {{ if {url:segments segment="1"} == NULL }}
+        {{ settings:site_name }} » {{ settings:site_slogan }} 
+    {{ elseif {url:segments segment="1"} != NULL }}
+        {{ template:title }} » {{ settings:site_name }}
+    {{ endif }}
+{{ endif }}
+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="{{page:meta_description }}" />
+<meta name="keywords" content="{{ page:keywords }}{{ keyword }}{{ if !is_last }}, {{ endif }}{{ /page:keywords }}" />
+<meta NAME="copyright" CONTENT="Copyright © {{ helper:date format="Y" }} {{ settings:site_name }} - All Rights Reserved.">
+<meta name = "format-detection" content = "telephone=no" />
+	
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+
+<!-- ROBOTO FONT -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,500' rel='stylesheet' type='text/css'>
+
+
+
+<script src="https://togetherjs.com/togetherjs-min.js"></script>
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- CSS FILES -->
+{{ theme:css file="style.css" }}
+{{ theme:css file="responsive.css" }}
+{{ theme:css file="colors/very-dark-blue.css" }}
+{{ theme:css file="font-awesome/font-awesome.min.css" }}
+{{ theme:css file="font-awesome/font-awesome.min.css" }}
+{{ theme:css file="flexslider.css" }}
+{{ theme:css file="colorbox.css" }}
+{{ theme:css file="forms.css" }}
+
+
+{{ mobile_options:meta_data }} 
+
+{{ template:metadata }}

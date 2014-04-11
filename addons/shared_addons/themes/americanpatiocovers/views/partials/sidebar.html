@@ -1,0 +1,42 @@
+<!-- SIDEBAR-->
+<div class="one-fourth sidebar right">
+    
+    <!-- Navigation -->
+    <div class="widget">
+        <h4 class="widget-title">Products</h4>
+        <ul class="sidebar-nav">
+            {{ streams:cycle stream="products" where="`status`='live'" no_results="" sort="asc" order_by="ordering_count" }}                          
+                {{ if {url:segments segment="2"} == slug }}
+                    <li><p style="margin:0px;"><i class="icon-angle-right"></i>{{ title }}</p></li>
+                {{ else }}
+                    <li><a href="/products/{{ slug }}" title="{{ title }}"><i class="icon-angle-right"></i>{{ title }}</a></li>
+                {{ endif }}
+            {{ /streams:cycle }}   
+        </ul>
+    </div>   
+    
+    {{ if {url:segments segment="2"} == 'patio-covers' }}	
+      <!-- Glass -->
+      <!-- <div class="widget">    
+          {{ widgets:instance id="1"}}
+      </div> -->
+      
+      <!-- Acrylic  -->
+      <!-- <div class="widget">          
+          {{ widgets:instance id="2"}}
+      </div> -->
+    {{ endif }}
+    
+    
+    <!-- Video -->
+    <div class="widget">
+        <h4 class="widget-title">Watch our Video</h4>
+        <div id="contents_52d834c4-8b8a-4664-b0ef-5915bec98932" class="content-item content-item-mirrored text" _title="Embedded HTML Code">
+            <a href="http://fast.wistia.net/embed/iframe/wagjetfrig?autoPlay=true&amp;controlsVisibleOnLoad=true&amp;popover=true&amp;version=v1&amp;videoHeight=281&amp;videoWidth=500&amp;volumeControl=true" class="wistia-popover[height=281,width=500]">						
+                <img src="http://embed-0.wistia.com/deliveries/f54b1427c30c0c81f8c822423668200734818996.jpg?image_play_button=true&amp;image_crop_resized=220x124" alt="">
+            </a>
+        <script src="http://wufoo.com/scripts/embed/form.js"></script><script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"></script><br><hr>
+        </div>
+    </div>
+</div>
+<!-- END SIDEBAR-->

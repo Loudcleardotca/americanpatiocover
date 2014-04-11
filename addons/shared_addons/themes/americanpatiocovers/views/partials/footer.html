@@ -1,0 +1,78 @@
+<!-- footer call to action starts -->
+<section class="footer-call-to-action">
+	<section class="container">
+		<div class="three-fourth">
+			<h4 style="margin-bottom:4px;font-size: 17px; "><b>Check out our Do-It-Yourself, easy to install patio cover kits by clicking <a href="http://acrylicpatiocovers.com" class="button color big round" target="_blank">Here</a></h4>
+          <br />
+		</div>
+		<div class="one-fourth">
+			<!-- <a href="#" class="button grey huge round">Download</a> -->
+		</div>
+	</section>
+</section>
+<!-- footer call to action ends -->
+
+<!--footer starts -->
+<footer id="footer" class="style-01">
+	<section class="container">
+		
+		<section class="one-third">
+			<h4>Quick links</h4>			
+			<ul>
+				<!-- latest posts widget starts-->
+				<li><a href="/free-estimate">Free Estimate</a></li>
+                <li><a href="/testimonials">Testimonials</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+                
+			</ul>
+		</section>
+        <section class="one-third">
+			<h4>Social links</h4>
+			 <ul class="social-links">
+                   
+                    {{ navigation:links group="social"}} 
+                      	{{ if title == "Houzz" }}
+                    		<li style="float:left; width:auto; border-bottom:0;"><a href="{{ url }}" title="{{ title }}" target="_blank">{{ theme:image file="huzz.png" alt="huzz" }}</a></li>  
+                        {{ else }}
+                        <li style="float:left; width:auto; border-bottom:0;"><a href="{{ url }}" title="{{ title }}" target="_blank"><i class="icon-{{class}}"></i></a></li>
+                        {{ endif }}
+            		{{ /navigation:links }} 
+                    
+                </ul>
+			<!-- twitter widget ends-->
+		</section>
+		<section class="one-third">			
+			<h4>Get a Free In-home Estimate!</h4>
+            <p style="margin-top:0;">We come to your home and give you a no-obligation quote. Complete Installed Covers from $25.00 per square foot!</p>
+            <div>
+ 
+			<br />
+
+
+	  			 <a class="button grey huge round" href="/free-estimate">Free Estimate</a>
+					</div>
+                  
+                    
+                 
+
+			</div>
+		</section>
+	</section>
+</footer>
+
+
+<section id="copyrights">
+	<section class="container">
+		<div class="one-half">
+		<p>&copy; {{ helper:strtoupper param={settings:site_name} }} {{ helper:date format="Y" }}</p>
+		</div>
+		<div class="one-half">
+               
+               
+            </div>
+	</section>
+</section>
+
+
+{{ google:analytics }}                     	
+
